@@ -74,6 +74,6 @@ source "$CONDA_ROOT_PREFIX/etc/profile.d/conda.sh" # otherwise conda complains a
 conda activate "$INSTALL_ENV_DIR"
 
 # download model
-wget -O "https://huggingface.co/TheBloke/LLaMA2-13B-Estopia-GGUF/resolve/main/llama2-13b-estopia.Q6_K.gguf?download=true"
+wget -O llama2-13b-estopia.Q6_K.gguf "https://huggingface.co/TheBloke/LLaMA2-13B-Estopia-GGUF/resolve/main/llama2-13b-estopia.Q6_K.gguf?download=true"
 # setup installer env
-python one_click.py --model TheBloke/LLaMA2-13B-Estopia-GGUF --share $@
+python one_click.py --model llama2-13b-estopia.Q6_K.gguf --share $@
