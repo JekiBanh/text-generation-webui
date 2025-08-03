@@ -73,5 +73,7 @@ export CUDA_HOME="$CUDA_PATH"
 source "$CONDA_ROOT_PREFIX/etc/profile.d/conda.sh" # otherwise conda complains about 'shell not initialized' (needed when running in a script)
 conda activate "$INSTALL_ENV_DIR"
 
+# download model
+wget -O "https://huggingface.co/TheBloke/LLaMA2-13B-Estopia-GGUF/resolve/main/llama2-13b-estopia.Q6_K.gguf?download=true"
 # setup installer env
-python one_click.py $@
+python one_click.py --model TheBloke/LLaMA2-13B-Estopia-GGUF --share $@
